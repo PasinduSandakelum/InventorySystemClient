@@ -1,10 +1,12 @@
-<div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Customer
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" [routerLink]="['/add-customer']">Add</a>
-      <a class="dropdown-item" href="#">View</a>
-      <a class="dropdown-item" href="#">Loyalty</a>
-    </div>
+
+<div class="list-group">
+  <button type="button" class="list-group-item list-group-item-action btn-block" id="dropdownMenuButton"
+    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Customer
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <button type="button" class="list-group-item list-group-item-action" [routerLink]="['/add-customer']">Add</button>
+    <button type="button" class="list-group-item list-group-item-action" [routerLink]="['/view-customer']">View</button>
+    <button type="button" class="list-group-item list-group-item-action">Loyalty</button>
   </div>
+</div>

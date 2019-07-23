@@ -8,6 +8,9 @@ import { TopNavComponent } from './top-nav/top-nav.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AddCustomerComponent } from './add-customer/add-customer.component';
+import { FormsModule } from '@angular/forms';
+import { ViewCustomerComponent } from './view-customer/view-customer.component';
+import { CustomerService } from './service/customer.service';
 
 @NgModule({
   declarations: [
@@ -16,13 +19,15 @@ import { AddCustomerComponent } from './add-customer/add-customer.component';
     TopNavComponent,
     SideNavComponent,
     DashboardComponent,
-    AddCustomerComponent
+    AddCustomerComponent,
+    ViewCustomerComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [CustomerService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

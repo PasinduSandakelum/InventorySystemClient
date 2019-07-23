@@ -1,2 +1,12 @@
-<p>sample works!</p>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <label for="">First : </label>
+    <input name="first" ngModel required>
+    <br>
+    <label for="last">Last : </label>
+    <input name="last" id="last" ngModel>
+    <br>
+    <button>Submit</button>
+  </form>
+
+  <p>{{f.value | json}}</p>
 

@@ -1,0 +1,66 @@
+<div class="card">
+    <div class="card-header">
+        Add Customer
+    </div>
+    <div class="card-body">
+        <form #customerForm="ngForm" (ngSubmit)="onSubmit(customerForm)" novalidate>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="inputGender">Gender</label>
+                    <select class="custom-select mr-sm-2" id="inputGender" name="gender" ngModel>
+                        <option selected>Choose...</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="inputTitle">Title</label>
+                    <select class="custom-select mr-sm-2" id="inputTitle" name="title" ngModel>
+                        <option selected>Choose...</option>
+                        <option value="Mr">Mr</option>
+                        <option value="Mrs">Mrs</option>
+                        <option value="Ms">Ms</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputOccupation">Occupation</label>
+                    <input type="text" class="form-control" id="inputOccupation" 
+                    placeholder="Occupation" name="occupation" ngModel>
+                </div>
+
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputFirstName">First Name</label>
+                    <input type="text" class="form-control" id="inputFirstName" 
+                    placeholder="First Name" name="fname" ngModel>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputLastName">Last Name</label>
+                    <input type="text" class="form-control" id="inputLastName" 
+                    placeholder="Last Name" name="lname" ngModel>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-8">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" 
+                    placeholder="Email" name="email" ngModel>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="inputDateOfBirth">Date of birth</label>
+                    <input type="date" class="form-control" id="inputDateOfBirth" name="dob" ngModel>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col">
+                    <label for="inputAddress">Address</label>
+                    <textarea class="form-control" id="inputAddress" rows="3" name="address" ngModel></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark">Add Customer</button>
+        </form>
+    </div>
+</div>
+
+<p>{{customerForm.value | json}}</p>

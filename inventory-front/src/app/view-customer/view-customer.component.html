@@ -1,0 +1,30 @@
+<div class="card">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Title</th>
+                <th scope="col">Occupation</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Date of birth</th>
+                <th scope="col">Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cus of customers; index as i;">
+                <th scope="row">{{i+1}}</th>
+                <td>{{cus.gender}}</td>
+                <td>{{cus.title}}</td>
+                <td>{{cus.occupation}}</td>
+                <td>{{cus.fname}}</td>
+                <td>{{cus.lname}}</td>
+                <td>{{cus.email}}</td>
+                <td>{{cus.dob}}</td>
+                <td>{{cus.address}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
